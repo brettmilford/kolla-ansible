@@ -37,6 +37,7 @@
        or inventory_hostname in groups['neutron-l3-agent']
        or inventory_hostname in groups['neutron-metadata-agent'])
     - ansible_os_family == 'RedHat' or ansible_distribution == 'Ubuntu'
+  ignore_errors: true
 
 - name: Checking tenant network types
   vars:
